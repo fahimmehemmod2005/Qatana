@@ -46,11 +46,11 @@ class CustomRichText extends StatelessWidget {
           children: [
             TextSpan(
               text: text1,
-              style: style1 ?? TextStyle(fontWeight: FontWeight.w500, fontSize: 14,color: Color(0xff4A4C56)),
+              style: style1
             ),
             TextSpan(
               text: text2,
-              style: style2 ?? TextStyle(fontWeight: FontWeight.w500, fontSize: 16,color: Color(0xff7C5BFD)),
+              style: style2,
               recognizer: TapGestureRecognizer()..onTap = text2Tap,
             ),
             TextSpan(

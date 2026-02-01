@@ -9,13 +9,33 @@ class BottomNavScreen extends StatefulWidget {
 }
 
 class _BottomNavScreenState extends State<BottomNavScreen> {
-
   int currentIndex = 0;
+
   final screens = [
-    Container(color: Colors.black,child: Center(child: Text('Home'),),),
-    Container(color: Colors.black,child: Center(child: Text('Dashboard'),),),
-    Container(color: Colors.black,child: Center(child: Text('Message'),),),
-    Container(color: Colors.black,child: Center(child: Text('Profile'),),),
+    Container(
+      color: Colors.white,
+      child: const Center(
+        child: Text('Home', style: TextStyle(color: Colors.black)),
+      ),
+    ),
+    Container(
+      color: Colors.black,
+      child: const Center(
+        child: Text('Dashboard', style: TextStyle(color: Colors.white)),
+      ),
+    ),
+    Container(
+      color: Colors.black,
+      child: const Center(
+        child: Text('Message', style: TextStyle(color: Colors.white)),
+      ),
+    ),
+    Container(
+      color: Colors.black,
+      child: const Center(
+        child: Text('Profile', style: TextStyle(color: Colors.white)),
+      ),
+    ),
   ];
 
   void changeIndex(int index) {
@@ -23,19 +43,22 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
       currentIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
+      extendBody: true,
       body: screens[currentIndex],
       bottomNavigationBar: SafeArea(
         child: Container(
+          margin: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 5.0),
           height: 85,
-          margin: const EdgeInsets.symmetric(horizontal: 15.0),
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8.0),
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(80.0),
             border: Border.all(color: AppColors.normal),
-            borderRadius: BorderRadius.circular(100),
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
@@ -60,17 +83,20 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
       ),
     );
   }
+
   Widget _navItem(IconData icon, String label, int index) {
     final isActive = currentIndex == index;
 
     return GestureDetector(
       onTap: () => changeIndex(index),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             icon,
             color: isActive ? const Color(0xff7C5BFD) : Colors.white,
+            size: 24,
           ),
           const SizedBox(height: 5),
           Text(

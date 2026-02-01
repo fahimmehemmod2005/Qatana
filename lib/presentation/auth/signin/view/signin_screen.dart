@@ -60,8 +60,7 @@ class _SignInScreenState extends State<SignInScreen> {
       body: GradientContainer(
         child: Form(
           key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
             children: [
               30.verticalSpace,
               InputField(
@@ -98,7 +97,6 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ],
               ),
-              const Spacer(),
               PrimaryButton(
                 label: 'Sign In',
                 isLoading: isLoading,
