@@ -1,31 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:intl_phone_field/phone_number.dart';
 
-class InputField extends StatelessWidget {
-  final String? topLabel;
+
+class WidgetCountryPickerField extends StatelessWidget {
   final String? hintText;
-  final IconData? suffixIcon;
-  final void Function()? onSuffixTap;
-  final Widget? prefixIcon;
-  final EdgeInsetsGeometry? contentPadding;
-  final int? maxLine;
+  final String? topLabel;
   final TextEditingController? controller;
-  final String? Function(String?)? validator;
-  final bool obscureText;
-  final TextInputType? keyboardType;
+  final String? Function(PhoneNumber?)? validator;
 
-  const InputField({
+  const WidgetCountryPickerField({
     super.key,
-    this.hintText,
-    this.contentPadding,
-    this.maxLine = 1,
+     this.hintText,
+     this.topLabel,
     this.controller,
-    this.topLabel,
-    this.prefixIcon,
     this.validator,
-    this.suffixIcon,
-    this.onSuffixTap,
-    this.obscureText = false,
-    this.keyboardType,
   });
 
   @override
@@ -39,14 +28,13 @@ class InputField extends StatelessWidget {
             style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400)
           ),
         SizedBox(height: 10.0),
-
-        TextFormField(
-          keyboardType: keyboardType,
-          obscureText: obscureText,
+        IntlPhoneField(
+          initialCountryCode: 'BD',
+          showCountryFlag: false,
           cursorColor: Colors.white,
-          validator: validator,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           controller: controller,
-          maxLines: maxLine,
+          validator: validator,
           decoration: InputDecoration(
 
             // Normal border
@@ -84,17 +72,8 @@ class InputField extends StatelessWidget {
               ),
             ),
 
-            prefixIcon: prefixIcon,
-            suffixIcon: suffixIcon == null
-                ? null
-                : IconButton(
-              icon: Icon(suffixIcon, color: Colors.white),
-              onPressed: onSuffixTap,
-            ),
-
             hintText: hintText,
             hintStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w400,color: Color(0xff4A4C56)),
-            contentPadding: contentPadding,
             errorStyle: const TextStyle(
               color: Colors.red,
               fontSize: 12,
@@ -102,9 +81,8 @@ class InputField extends StatelessWidget {
             ),
             errorMaxLines: 2,
           ),
-        )
+        ),
       ],
     );
   }
 }
-

@@ -9,6 +9,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Qatana',
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
       onGenerateRoute: RouteGenerator.getRoute,
       initialRoute: Routes.splashRoute,
     );
