@@ -49,7 +49,7 @@ class _SignupScreenState extends State<SignupScreen> {
     print('Password: ${_password.text.trim()}');
     print('Confirm Pass: ${_confirmPass.text.trim()}');
     print('Selected Role: ${selected ?? "None".toString()}');
-    Navigator.pushNamed(context, Routes.registrationRoute);
+    Navigator.pushNamed(context, Routes.subscriptionRoute);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: const Text(
@@ -121,7 +121,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               20.verticalSpace,
               PrimaryButton(
-                label: 'Sign In',
+                label: 'Sign Up',
                 isLoading: isLoading,
                 onPressed: _onPressed,
               ),

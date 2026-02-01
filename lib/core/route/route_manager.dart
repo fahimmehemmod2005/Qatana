@@ -6,6 +6,7 @@ import 'package:qatana/presentation/auth/tabs/view/registration_screen.dart';
 import 'package:qatana/presentation/auth/verification/view/verification_screen.dart';
 import 'package:qatana/presentation/bottom_nav/bottom_nav_screen.dart';
 import 'package:qatana/presentation/splash/splash.dart';
+import 'package:qatana/presentation/subscription/view/subscription_screen.dart';
 import '../../presentation/auth/signin/view/signin_screen.dart';
 
 class Routes {
@@ -17,6 +18,7 @@ class Routes {
   static const String verificationRoute = '/verificationRoute';
   static const String resetPassRoute = '/resetPassRoute';
   static const String bottomNav = '/bottomNav';
+  static const String subscriptionRoute = '/subscriptionRoute';
 }
 
 class RouteGenerator {
@@ -38,6 +40,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ResetPassword());
       case Routes.bottomNav:
         return MaterialPageRoute(builder: (_) => const BottomNavScreen());
+      case Routes.subscriptionRoute:
+        return MaterialPageRoute(builder: (_) => const SubscriptionScreen());
 
       default:
         return unDefineRoute();

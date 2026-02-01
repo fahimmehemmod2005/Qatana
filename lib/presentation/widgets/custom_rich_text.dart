@@ -68,7 +68,7 @@ class CustomRichText extends StatelessWidget {
             ),
             TextSpan(
               text: text6,
-              style: style6 ?? AppStyles.size14w400(color: Colors.grey),
+              style: style6,
               recognizer: TapGestureRecognizer()..onTap = text6Tap,
             ),
           ],
