@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qatana/presentation/auth/signup/view/signup_screen.dart';
 import 'package:qatana/presentation/splash/splash.dart';
-
 import '../../presentation/auth/signin/view/signin_screen.dart';
 
 class Routes {
@@ -28,8 +27,7 @@ class RouteGenerator {
   static Route<dynamic> unDefineRoute() {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
-        appBar: AppBar(title: Text('noRoute')),
-        body: Center(child: Text('noRoute')),
+        body: Center(child: Text('NO ROUTES FOUND')),
       ),
     );
   }
