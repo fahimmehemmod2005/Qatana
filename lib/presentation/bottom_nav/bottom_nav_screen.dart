@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qatana/core/constansts/app_colors.dart';
+import 'package:qatana/presentation/message/view/message_screen.dart';
 import 'package:qatana/presentation/profile/view/fans_profile_screen.dart';
 
 class BottomNavScreen extends StatefulWidget {
@@ -25,12 +26,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         child: Text('Dashboard', style: TextStyle(color: Colors.white)),
       ),
     ),
-    Container(
-      color: Colors.black,
-      child: const Center(
-        child: Text('Message', style: TextStyle(color: Colors.white)),
-      ),
-    ),
+    const MessageScreen(),
     const FansProfileScreen()
   ];
 

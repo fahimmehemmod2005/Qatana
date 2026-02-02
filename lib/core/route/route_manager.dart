@@ -5,6 +5,7 @@ import 'package:qatana/presentation/auth/signup/view/signup_screen.dart';
 import 'package:qatana/presentation/auth/tabs/view/registration_screen.dart';
 import 'package:qatana/presentation/auth/verification/view/verification_screen.dart';
 import 'package:qatana/presentation/bottom_nav/bottom_nav_screen.dart';
+import 'package:qatana/presentation/message/view/message_screen.dart';
 import 'package:qatana/presentation/profile/view/account_management.dart';
 import 'package:qatana/presentation/profile/view/change_password.dart';
 import 'package:qatana/presentation/profile/view/fans_edit_profile.dart';
@@ -39,6 +40,7 @@ class Routes {
   static const String accountManagement = '/accountManagement';
   static const String changePassword = '/changePassword';
   static const String currentPlanRoute = '/currentPlanRoute';
+  static const String messageRoute = '/messageRoute';
 }
 
 class RouteGenerator {
@@ -82,6 +84,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ChangePassword());
         case Routes.currentPlanRoute:
         return MaterialPageRoute(builder: (_) => const CurrentPlan());
+        case Routes.messageRoute:
+        return MaterialPageRoute(builder: (_) => const MessageScreen());
 
       default:
         return unDefineRoute();
