@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qatana/core/constansts/app_colors.dart';
+import 'package:qatana/presentation/profile/view/fans_profile_screen.dart';
 
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});
@@ -30,12 +31,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         child: Text('Message', style: TextStyle(color: Colors.white)),
       ),
     ),
-    Container(
-      color: Colors.black,
-      child: const Center(
-        child: Text('Profile', style: TextStyle(color: Colors.white)),
-      ),
-    ),
+    const FansProfileScreen()
   ];
 
   void changeIndex(int index) {
@@ -47,7 +43,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.transparent,
       extendBody: true,
       body: screens[currentIndex],
       bottomNavigationBar: SafeArea(

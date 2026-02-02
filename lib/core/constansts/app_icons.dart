@@ -10,4 +10,5 @@ class AppIcons {
   static const String sent = 'assets/icons/sent.png';
   static const String successful = 'assets/icons/successful.png';
   static const String visa = 'assets/icons/visa.png';
+  static const String blueCheck = 'assets/icons/blue_check.png';
 }

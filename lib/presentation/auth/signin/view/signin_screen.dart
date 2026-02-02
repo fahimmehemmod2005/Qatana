@@ -97,6 +97,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ],
               ),
+              30.verticalSpace,
               PrimaryButton(
                 label: 'Sign In',
                 isLoading: isLoading,
