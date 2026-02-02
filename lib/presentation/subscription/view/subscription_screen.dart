@@ -132,7 +132,9 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                         10.verticalSpace,
                         PrimaryButton(
                           label: 'Buy Now',
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.pushNamed(context, Routes.paymentRoute);
+                          },
                         ),
                       ],
                     ),
@@ -185,7 +187,9 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                         10.verticalSpace,
                         PrimaryButton(
                           label: 'Buy Now',
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.pushNamed(context, Routes.paymentRoute);
+                          },
                         ),
                       ],
                     ),

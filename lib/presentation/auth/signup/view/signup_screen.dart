@@ -114,9 +114,9 @@ class _SignupScreenState extends State<SignupScreen> {
               20.verticalSpace,
               Row(
                 children: [
-                  Expanded(child: role(role: 'Creator')),
+                  Expanded(child: _role(role: 'Creator')),
                   15.horizontalSpace,
-                  Expanded(child: role(role: 'Fans')),
+                  Expanded(child: _role(role: 'Fans')),
                 ],
               ),
               20.verticalSpace,
@@ -132,7 +132,7 @@ class _SignupScreenState extends State<SignupScreen> {
       ),
     );
   }
-  Widget role ({required String role}){
+  Widget _role ({required String role}){
     bool isSelected = selected == role;
     return GestureDetector(
       onTap: () {

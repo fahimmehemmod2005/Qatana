@@ -6,6 +6,9 @@ import 'package:qatana/presentation/auth/tabs/view/registration_screen.dart';
 import 'package:qatana/presentation/auth/verification/view/verification_screen.dart';
 import 'package:qatana/presentation/bottom_nav/bottom_nav_screen.dart';
 import 'package:qatana/presentation/splash/splash.dart';
+import 'package:qatana/presentation/subscription/view/payment_info.dart';
+import 'package:qatana/presentation/subscription/view/payment_method.dart';
+import 'package:qatana/presentation/subscription/view/review_summary.dart';
 import 'package:qatana/presentation/subscription/view/subscription_screen.dart';
 import '../../presentation/auth/signin/view/signin_screen.dart';
 
@@ -19,6 +22,9 @@ class Routes {
   static const String resetPassRoute = '/resetPassRoute';
   static const String bottomNav = '/bottomNav';
   static const String subscriptionRoute = '/subscriptionRoute';
+  static const String paymentRoute = '/paymentRoute';
+  static const String paymentInfoRoute = '/paymentInfoRoute';
+  static const String reviewSummaryRoute = '/reviewSummaryRoute';
 }
 
 class RouteGenerator {
@@ -42,6 +48,12 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const BottomNavScreen());
       case Routes.subscriptionRoute:
         return MaterialPageRoute(builder: (_) => const SubscriptionScreen());
+      case Routes.paymentRoute:
+        return MaterialPageRoute(builder: (_) => const PaymentMethod());
+      case Routes.paymentInfoRoute:
+        return MaterialPageRoute(builder: (_) => const PaymentInfo());
+        case Routes.reviewSummaryRoute:
+        return MaterialPageRoute(builder: (_) => const ReviewSummary());
 
       default:
         return unDefineRoute();
