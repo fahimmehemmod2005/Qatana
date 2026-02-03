@@ -5,6 +5,7 @@ import 'package:qatana/core/resource/app_styles.dart';
 import 'package:qatana/presentation/widgets/gradient_container.dart';
 
 import '../../../core/constansts/app_images.dart';
+import '../../../core/route/route_manager.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -46,7 +47,10 @@ class _ChatScreenState extends State<ChatScreen> {
                             ),
                           ),
                         ),
-                        onTap: (){},
+                        onTap: (){
+
+                          Navigator.pushNamed(context, Routes.creatorProfile);
+                        },
                       ),
                       10.horizontalSpace,
                       Text('Alex Alex', style: AppStyles.size16w700()),

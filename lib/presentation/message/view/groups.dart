@@ -41,7 +41,9 @@ class _GroupsState extends State<Groups> {
                         Icon(Icons.group_add),
                       ],
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.createGroup);
+                    },
                   ),
                 10.verticalSpace,
                 MessageCard(
@@ -60,9 +62,9 @@ class _GroupsState extends State<Groups> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            TextButton(onPressed: (){}, child: Text('View profile',style: TextStyle(color: Colors.black),)),
-                            TextButton(onPressed: (){}, child: Text('Delete',style: TextStyle(color: Colors.black),)),
-                            TextButton(onPressed: (){}, child: Text('Block',style: TextStyle(color: Colors.black))),
+                            TextButton(onPressed: (){}, child: Text('Add member',style: TextStyle(color: Colors.white),)),
+                            TextButton(onPressed: (){}, child: Text('Delete',style: TextStyle(color: Colors.red),)),
+                            TextButton(onPressed: (){}, child: Text('Block',style: TextStyle(color: Colors.red))),
                           ],
                         )
                     );

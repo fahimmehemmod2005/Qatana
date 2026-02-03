@@ -38,6 +38,70 @@ class _SettingsState extends State<Settings> {
                     side: BorderSide(color: AppColors.normal),
                   ),
                   child: ListTile(
+                    leading: Icon(Icons.dashboard_customize, color: Colors.white),
+                    title: Text('Analytics Dashboard'),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+                10.verticalSpace,
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                    side: BorderSide(color: AppColors.normal),
+                  ),
+                  child: ListTile(
+                    leading: Icon(Icons.manage_history, color: Colors.white),
+                    title: Text('Manage Content'),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+                10.verticalSpace,
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                    side: BorderSide(color: AppColors.normal),
+                  ),
+                  child: ListTile(
+                    leading: Icon(Icons.shop, color: Colors.white),
+                    title: Text('Manage Shop'),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+                10.verticalSpace,
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                    side: BorderSide(color: AppColors.normal),
+                  ),
+                  child: ListTile(
+                    leading: Icon(Icons.payment, color: Colors.white),
+                    title: Text('Payment and Invoice'),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+                10.verticalSpace,
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                    side: BorderSide(color: AppColors.normal),
+                  ),
+                  child: ListTile(
                     leading: Icon(
                       Icons.privacy_tip_outlined,
                       color: Colors.white,
@@ -146,9 +210,9 @@ class _SettingsState extends State<Settings> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('Logout',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700,color: Colors.black),),
+                  Text('Logout',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700,color: Colors.white),),
                   10.verticalSpace,
-                  Text('Are you sure want to logout?',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w500,color: Colors.black),textAlign: TextAlign.center,),
+                  Text('Are you sure want to logout?',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w500,color: Colors.white),textAlign: TextAlign.center,),
                   20.verticalSpace,
                   Row(
                     children: [

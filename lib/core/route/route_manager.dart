@@ -8,12 +8,15 @@ import 'package:qatana/presentation/bottom_nav/bottom_nav_screen.dart';
 import 'package:qatana/presentation/message/view/block_user.dart';
 import 'package:qatana/presentation/message/view/broadcast.dart';
 import 'package:qatana/presentation/message/view/chat_screen.dart';
+import 'package:qatana/presentation/message/view/create_group.dart';
 import 'package:qatana/presentation/message/view/direct_messages.dart';
 import 'package:qatana/presentation/message/view/groups.dart';
 import 'package:qatana/presentation/message/view/message_screen.dart';
 import 'package:qatana/presentation/message/view/message_settings.dart';
+import 'package:qatana/presentation/notification/view/notification_screen.dart';
 import 'package:qatana/presentation/profile/view/account_management.dart';
 import 'package:qatana/presentation/profile/view/change_password.dart';
+import 'package:qatana/presentation/profile/view/creator_profile.dart';
 import 'package:qatana/presentation/profile/view/fans_edit_profile.dart';
 import 'package:qatana/presentation/profile/view/fans_profile_screen.dart';
 import 'package:qatana/presentation/profile/view/privacy_settings.dart';
@@ -53,6 +56,9 @@ class Routes {
   static const String chatRoute = '/chatRoute';
   static const String messageSettings = '/messageSettings';
   static const String blockUsers = '/blockUsers';
+  static const String creatorProfile = '/creatorProfile';
+  static const String notificationRoute = '/notificationRoute';
+  static const String createGroup = '/createGroup';
 }
 
 class RouteGenerator {
@@ -90,26 +96,32 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const Settings());
       case Routes.privacyRoute:
         return MaterialPageRoute(builder: (_) => const PrivacySettings());
-        case Routes.accountManagement:
+      case Routes.accountManagement:
         return MaterialPageRoute(builder: (_) => const AccountManagement());
-        case Routes.changePassword:
+      case Routes.changePassword:
         return MaterialPageRoute(builder: (_) => const ChangePassword());
-        case Routes.currentPlanRoute:
+      case Routes.currentPlanRoute:
         return MaterialPageRoute(builder: (_) => const CurrentPlan());
-        case Routes.messageRoute:
+      case Routes.messageRoute:
         return MaterialPageRoute(builder: (_) => const MessageScreen());
-        case Routes.directMessage:
+      case Routes.directMessage:
         return MaterialPageRoute(builder: (_) => const DirectMessages());
-        case Routes.broadcast:
+      case Routes.broadcast:
         return MaterialPageRoute(builder: (_) => const Broadcast());
-        case Routes.groupRoutes:
+      case Routes.groupRoutes:
         return MaterialPageRoute(builder: (_) => const Groups());
-        case Routes.chatRoute:
+      case Routes.chatRoute:
         return MaterialPageRoute(builder: (_) => const ChatScreen());
-        case Routes.messageSettings:
+      case Routes.messageSettings:
         return MaterialPageRoute(builder: (_) => const MessageSettings());
       case Routes.blockUsers:
         return MaterialPageRoute(builder: (_) => const BlockUser());
+      case Routes.creatorProfile:
+        return MaterialPageRoute(builder: (_) => const CreatorProfile());
+      case Routes.notificationRoute:
+        return MaterialPageRoute(builder: (_) => const NotificationScreen());
+      case Routes.createGroup:
+        return MaterialPageRoute(builder: (_) => const CreateGroup());
 
       default:
         return unDefineRoute();

@@ -43,7 +43,7 @@ class _FansEditProfileState extends State<FansEditProfile> {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(12.0),
                         image: DecorationImage(
-                          image: AssetImage(AppImages.fahimCover),
+                          image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlZ2vhLzIdtwpwXw90ZuWhngB-MdFsjD64CQ&s'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -70,7 +70,7 @@ class _FansEditProfileState extends State<FansEditProfile> {
                           color: Colors.blue,
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage(AppImages.fahim),
+                            image: NetworkImage('https://t3.ftcdn.net/jpg/07/24/59/76/360_F_724597608_pmo5BsVumFcFyHJKlASG2Y2KpkkfiYUU.jpg'),
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -81,10 +81,10 @@ class _FansEditProfileState extends State<FansEditProfile> {
                       bottom: -60,
                       child: IconButton(
                         style: IconButton.styleFrom(
-                          backgroundColor: Colors.white,
+                          backgroundColor: Colors.black,
                         ),
                         onPressed: () {},
-                        icon: Icon(Icons.camera_alt, color: Colors.black),
+                        icon: Icon(Icons.camera_alt, color: Colors.white),
                       ),
                     ),
                   ],

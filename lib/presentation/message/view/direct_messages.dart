@@ -72,14 +72,18 @@ class _DirectMessagesState extends State<DirectMessages> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        TextButton(onPressed: (){}, child: Text('view profile',style: TextStyle(color: Colors.black),)),
-                        TextButton(onPressed: (){}, child: Text('Delete',style: TextStyle(color: Colors.black),)),
-                        TextButton(onPressed: (){}, child: Text('Block',style: TextStyle(color: Colors.black))),
+                        TextButton(onPressed: (){
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, Routes.creatorProfile);
+                        }, child: Text('view profile',style: TextStyle(color: Colors.white),)),
+                        TextButton(onPressed: (){}, child: Text('Delete',style: TextStyle(color: Colors.red),)),
+                        TextButton(onPressed: (){}, child: Text('Block',style: TextStyle(color: Colors.red))),
                       ],
                     )
                   );
                 },
               ),
+
             ],
           ),
         ),

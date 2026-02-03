@@ -27,7 +27,9 @@ class _FansProfileScreenState extends State<FansProfileScreen> {
         backgroundColor: Colors.transparent,
         title: Text('Profile'),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.notifications_outlined,color: Colors.white,)),
+          IconButton(onPressed: (){
+            Navigator.pushNamed(context, Routes.notificationRoute);
+          }, icon: Icon(Icons.notifications_outlined,color: Colors.white,)),
           IconButton(onPressed: (){
             Navigator.pushNamed(context, Routes.settingsRoute);
           }, icon: Icon(Icons.settings,color: Colors.white,)),
@@ -50,7 +52,7 @@ class _FansProfileScreenState extends State<FansProfileScreen> {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(12.0),
                         image: DecorationImage(
-                          image: AssetImage(AppImages.fahimCover),
+                          image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlZ2vhLzIdtwpwXw90ZuWhngB-MdFsjD64CQ&s'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -67,7 +69,7 @@ class _FansProfileScreenState extends State<FansProfileScreen> {
                           shape: BoxShape.circle,
                           border: Border.all(color: Colors.blue,width: 3),
                           image: DecorationImage(
-                            image: AssetImage(AppImages.fahim),
+                            image: NetworkImage('https://t3.ftcdn.net/jpg/07/24/59/76/360_F_724597608_pmo5BsVumFcFyHJKlASG2Y2KpkkfiYUU.jpg'),
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -79,7 +81,7 @@ class _FansProfileScreenState extends State<FansProfileScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('MD FAHIM MEHEMMOD',
+                    Text('MR RONY',
                       style: AppStyles.size24w700(),
                       textAlign: TextAlign.center,
                     ),
@@ -87,7 +89,7 @@ class _FansProfileScreenState extends State<FansProfileScreen> {
                     Image.asset(AppIcons.blueCheck,height: 30,width: 30,)
                   ],
                 ),
-                Text('@fahimmehemmod',style: AppStyles.size14w600(),),
+                Text('@jony143',style: AppStyles.size14w600(),),
                 10.verticalSpace,
                 Text('bio',style: AppStyles.size16w400(),),
                 Text('Biggest supporter of @creatorname ⭐ | VIP subscriber | Living my best life through inspiration 💫',
@@ -103,7 +105,7 @@ class _FansProfileScreenState extends State<FansProfileScreen> {
                   children: [
                     Icon(Icons.location_on_outlined,color: Colors.white,),
                     5.horizontalSpace,
-                    Text('Narayanganj, Dhaka, Bangladesh',
+                    Text('USA',
                       style: AppStyles.size16w400(),
                       textAlign: TextAlign.center,),
                   ],
