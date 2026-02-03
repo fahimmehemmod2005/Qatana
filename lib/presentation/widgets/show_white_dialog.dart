@@ -12,7 +12,7 @@ void showWhiteDialog({
         filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
         child: Dialog(
           elevation: 5,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.white.withAlpha(30),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15.0),
           ),

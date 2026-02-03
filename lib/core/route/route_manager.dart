@@ -5,7 +5,13 @@ import 'package:qatana/presentation/auth/signup/view/signup_screen.dart';
 import 'package:qatana/presentation/auth/tabs/view/registration_screen.dart';
 import 'package:qatana/presentation/auth/verification/view/verification_screen.dart';
 import 'package:qatana/presentation/bottom_nav/bottom_nav_screen.dart';
+import 'package:qatana/presentation/message/view/block_user.dart';
+import 'package:qatana/presentation/message/view/broadcast.dart';
+import 'package:qatana/presentation/message/view/chat_screen.dart';
+import 'package:qatana/presentation/message/view/direct_messages.dart';
+import 'package:qatana/presentation/message/view/groups.dart';
 import 'package:qatana/presentation/message/view/message_screen.dart';
+import 'package:qatana/presentation/message/view/message_settings.dart';
 import 'package:qatana/presentation/profile/view/account_management.dart';
 import 'package:qatana/presentation/profile/view/change_password.dart';
 import 'package:qatana/presentation/profile/view/fans_edit_profile.dart';
@@ -40,7 +46,13 @@ class Routes {
   static const String accountManagement = '/accountManagement';
   static const String changePassword = '/changePassword';
   static const String currentPlanRoute = '/currentPlanRoute';
+  static const String broadcast = '/broadcast';
+  static const String directMessage = '/directMessage';
+  static const String groupRoutes = '/groupRoutes';
   static const String messageRoute = '/messageRoute';
+  static const String chatRoute = '/chatRoute';
+  static const String messageSettings = '/messageSettings';
+  static const String blockUsers = '/blockUsers';
 }
 
 class RouteGenerator {
@@ -86,6 +98,18 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const CurrentPlan());
         case Routes.messageRoute:
         return MaterialPageRoute(builder: (_) => const MessageScreen());
+        case Routes.directMessage:
+        return MaterialPageRoute(builder: (_) => const DirectMessages());
+        case Routes.broadcast:
+        return MaterialPageRoute(builder: (_) => const Broadcast());
+        case Routes.groupRoutes:
+        return MaterialPageRoute(builder: (_) => const Groups());
+        case Routes.chatRoute:
+        return MaterialPageRoute(builder: (_) => const ChatScreen());
+        case Routes.messageSettings:
+        return MaterialPageRoute(builder: (_) => const MessageSettings());
+      case Routes.blockUsers:
+        return MaterialPageRoute(builder: (_) => const BlockUser());
 
       default:
         return unDefineRoute();

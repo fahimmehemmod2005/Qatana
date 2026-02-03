@@ -138,10 +138,10 @@ class _ReviewSummaryState extends State<ReviewSummary> {
                         children: [
                           Image.asset(AppIcons.checkColor,height: 100,width: 100,),
                           20.verticalSpace,
-                          Text('Welcome to PRO Plan!',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500,color: Colors.black),),
+                          Text('Welcome to PRO Plan!',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500,color: Colors.white),),
                           10.verticalSpace,
                           Text('You have successfully subscribed Pro for 6 months! E-Receipt has been sent to your email address. Enjoy all the benefits!',
-                              style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Color(0xff4A4C56)),
+                              style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.white),
                             textAlign: TextAlign.center,
                           ),
                           20.verticalSpace,
