@@ -11,4 +11,7 @@ class AppIcons {
   static const String successful = 'assets/icons/successful.png';
   static const String visa = 'assets/icons/visa.png';
   static const String blueCheck = 'assets/icons/blue_check.png';
+  static const String instagram = 'assets/icons/instagram.png';
+  static const String tiktok = 'assets/icons/tiktok.png';
+  static const String youtube = 'assets/icons/youtube.png';
 }

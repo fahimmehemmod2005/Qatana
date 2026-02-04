@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:qatana/core/constansts/app_images.dart';
 import '../../../core/constansts/app_colors.dart';
 import '../../../core/constansts/app_icons.dart';
 import '../../../core/resource/app_styles.dart';
@@ -132,10 +133,49 @@ class _CreatorProfileState extends State<CreatorProfile> {
                   showGradient: false,
                   backgroundColor: Colors.red,
                   label: 'Subscribe ⭐',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
                 5.verticalSpace,
-                Text('Monthly \$499 | Yearly \$3500',style: AppStyles.size14w600(),),
+                Text(
+                  'Monthly \$499 | Yearly \$3500',
+                  style: AppStyles.size14w600(),
+                ),
+                20.verticalSpace,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(AppIcons.instagram),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(AppIcons.youtube),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(AppIcons.tiktok),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 20.verticalSpace,
                 Card(
                   elevation: 1,
@@ -157,10 +197,7 @@ class _CreatorProfileState extends State<CreatorProfile> {
                           style: AppStyles.size14w600(),
                         ),
                         5.verticalSpace,
-                        Text(
-                          '45.5k Total Fans',
-                          style: AppStyles.size14w600(),
-                        ),
+                        Text('45.5k Total Fans', style: AppStyles.size14w600()),
                         5.verticalSpace,
                         Text(
                           'Member since Jan 2024',
@@ -172,36 +209,30 @@ class _CreatorProfileState extends State<CreatorProfile> {
                 ),
                 10.verticalSpace,
                 Card(
-                      elevation: 1,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0),
-                        side: BorderSide(color: AppColors.normal, width: 1.5),
-                      ),
-                      child: Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              '🛍️ Shop',
-                              style: AppStyles.size16w700(),
-                            ),
-                            10.verticalSpace,
-                            Text('Product 1', style: AppStyles.size14w600()),
-                            5.verticalSpace,
-                            Text('Product 2', style: AppStyles.size14w600()),
-                            5.verticalSpace,
-                            Text('Product 3', style: AppStyles.size14w600()),
-                            TextButton(
-                              onPressed: () {},
-                              child: Text('View all'),
-                            ),
-                          ],
-                        ),
-                      ),
+                  elevation: 1,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                    side: BorderSide(color: AppColors.normal, width: 1.5),
+                  ),
+                  child: Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text('🛍️ Shop', style: AppStyles.size16w700()),
+                        10.verticalSpace,
+                        Text('Product 1', style: AppStyles.size14w600()),
+                        5.verticalSpace,
+                        Text('Product 2', style: AppStyles.size14w600()),
+                        5.verticalSpace,
+                        Text('Product 3', style: AppStyles.size14w600()),
+                        TextButton(onPressed: () {}, child: Text('View all')),
+                      ],
                     ),
+                  ),
+                ),
                 10.verticalSpace,
                 Card(
                   elevation: 1,
@@ -226,7 +257,10 @@ class _CreatorProfileState extends State<CreatorProfile> {
                           style: AppStyles.size14w600(),
                         ),
                         5.verticalSpace,
-                        Text('🎥 Exclusive Content', style: AppStyles.size14w600()),
+                        Text(
+                          '🎥 Exclusive Content',
+                          style: AppStyles.size14w600(),
+                        ),
                       ],
                     ),
                   ),
