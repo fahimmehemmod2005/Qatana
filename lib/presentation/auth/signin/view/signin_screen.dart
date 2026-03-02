@@ -1,3 +1,6 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qatana/core/constansts/app_colors.dart';
@@ -32,8 +35,12 @@ class _SignInScreenState extends State<SignInScreen> {
       isLoading = true;
     });
     await Future.delayed(const Duration(seconds: 2));
-    print('Email: ${_userName.text.trim()}');
-    print('Password: ${_password.text.trim()}');
+    if (kDebugMode) {
+      print('Email: ${_userName.text.trim()}');
+    }
+    if (kDebugMode) {
+      print('Password: ${_password.text.trim()}');
+    }
     Navigator.pushNamed(context, Routes.bottomNav);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(

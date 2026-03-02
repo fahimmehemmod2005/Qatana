@@ -1,3 +1,6 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
@@ -29,7 +32,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
     });
     await Future.delayed(const Duration(seconds: 2));
     Navigator.pushNamed(context, Routes.resetPassRoute);
-    print('OTP: ${_pinController.text.trim()}');
+    if (kDebugMode) {
+      print('OTP: ${_pinController.text.trim()}');
+    }
     setState(() {
       isLoading = false;
     });

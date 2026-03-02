@@ -1,3 +1,6 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qatana/core/constansts/app_colors.dart';
@@ -43,12 +46,24 @@ class _SignupScreenState extends State<SignupScreen> {
       isLoading = true;
     });
     await Future.delayed(const Duration(seconds: 2));
-    print('Name: ${_name.text.trim()}');
-    print('Email: ${_userName.text.trim()}');
-    print('Number: ${_number.text.trim()}');
-    print('Password: ${_password.text.trim()}');
-    print('Confirm Pass: ${_confirmPass.text.trim()}');
-    print('Selected Role: ${selected ?? "None".toString()}');
+    if (kDebugMode) {
+      print('Name: ${_name.text.trim()}');
+    }
+    if (kDebugMode) {
+      print('Email: ${_userName.text.trim()}');
+    }
+    if (kDebugMode) {
+      print('Number: ${_number.text.trim()}');
+    }
+    if (kDebugMode) {
+      print('Password: ${_password.text.trim()}');
+    }
+    if (kDebugMode) {
+      print('Confirm Pass: ${_confirmPass.text.trim()}');
+    }
+    if (kDebugMode) {
+      print('Selected Role: ${selected ?? "None".toString()}');
+    }
     Navigator.pushNamed(context, Routes.subscriptionRoute);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
