@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:qatana/core/resource/app_styles.dart';
 import 'package:qatana/core/route/route_manager.dart';
 import 'package:qatana/presentation/message/widgets/vip_online_card.dart';
 import 'package:qatana/presentation/widgets/show_white_dialog.dart';

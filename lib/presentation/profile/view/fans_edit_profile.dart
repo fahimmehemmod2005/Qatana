@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qatana/presentation/widgets/gradient_container.dart';
 import 'package:qatana/presentation/widgets/input_field.dart';
 import 'package:qatana/presentation/widgets/primary_button.dart';
-
-import '../../../core/constansts/app_images.dart';
 import '../../widgets/widget_country_picker_field.dart';
 
 class FansEditProfile extends StatefulWidget {

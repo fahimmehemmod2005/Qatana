@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qatana/core/constansts/app_icons.dart';
-import 'package:qatana/core/constansts/app_images.dart';
 import 'package:qatana/core/route/route_manager.dart';
 import 'package:qatana/presentation/widgets/gradient_container.dart';
 import 'package:qatana/presentation/widgets/primary_button.dart';

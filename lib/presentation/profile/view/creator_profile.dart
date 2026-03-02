@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:qatana/core/constansts/app_images.dart';
 import '../../../core/constansts/app_colors.dart';
 import '../../../core/constansts/app_icons.dart';
 import '../../../core/resource/app_styles.dart';

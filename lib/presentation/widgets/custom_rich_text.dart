@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:qatana/core/resource/app_styles.dart';
 
 class CustomRichText extends StatelessWidget {
   final String? text1;
